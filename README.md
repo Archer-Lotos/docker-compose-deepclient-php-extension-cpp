@@ -16,6 +16,7 @@ docker run -d -p 18080:80 --name my-php-container php:7.4.33-apache
 ```bash
 apt update
 apt install autoconf cmake make automake libtool git libboost-all-dev libssl-dev g++
+apt install libboost-python1.74-dev
 ```
 
 ### For PHP

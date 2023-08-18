@@ -12,6 +12,7 @@ INCLUDE_DIRECTORIES(
   "${CMAKE_SOURCE_DIR}/ext"
   "${CMAKE_SOURCE_DIR}/build/main"
   "${CMAKE_SOURCE_DIR}/build/Zend"
+  "${CMAKE_SOURCE_DIR}/python"
 )
 
 # Find Boost package
@@ -22,7 +23,7 @@ include_directories(${Boost_INCLUDE_DIRS})
 
 # Define your source files
 set(SOURCES
-        # phpcpp/phpcpp.h
+        # phpcpp.h
         # DeepClient.cpp
         # BoostPythonBindings.cpp
         deep_client_php_wrapper.cpp
@@ -30,7 +31,7 @@ set(SOURCES
 # Create the Python/PHP module
 add_library(deep_client_php_extension MODULE ${SOURCES})
 
-target_link_libraries(deep_client_php_extension ${Boost_LIBRARIES} ${PYTHON_LIBRARIES})
+target_link_libraries(deep_client_php_extension ${Boost_LIBRARIES})
 
 SET_TARGET_PROPERTIES(deep_client_php_extension
   PROPERTIES

@@ -1,5 +1,6 @@
 #include <phpcpp.h>
 #include <string>
+#include <boost/python.hpp>
 //#include <Python.h>
 
 namespace PhpWrapper {
