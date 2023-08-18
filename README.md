@@ -51,9 +51,20 @@ cp include/*.h /usr/include/phpcpp
 
 ## For main project
 ```bash
+apt install libc6
 find /app/PHP-CPP/ -type f -name "*.h" -exec cp --parents {} /app/extension-cpp \;
 find /app/Python-3.9.17/ -type f -name "*.h" -exec cp --parents {} /app/extension-cpp/python \;
 find /app/PHP-CPP/ -type f -name "*.cpp" -exec cp --parents {} /app/extension-cpp/php-cpp-src \;
 cmake .
 make
+cp deep_client_php_extension.so /usr/local/lib/php/extensions/no-debug-non-zts-20190902/
+cp -r python3.10 /usr/include/
+cp -r python3.10 /usr/lib/
+cp python3.10 /usr/bin/
+rm /usr/bin/python3
+ln -s /usr/bin/python3.10 /usr/bin/python3
+dpkg -i libc6_2.37-7_amd64.deb
+dpkg -i libc-devtools_2.37-7_amd64.deb
+dpkg -i libgd3_2.3.3-9_amd64.deb
+dpkg -i libc6_2.34-0ubuntu3_amd64.deb
 ```
