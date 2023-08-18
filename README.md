@@ -42,6 +42,10 @@ find /app/php-src/main/ -type f -name "*.h" -exec cp --parents {} /app/PHP-CPP/p
 find /app/php-src/Zend/ -type f -name "*.h" -exec cp --parents {} /app/PHP-CPP/zend_headers \;
 cmake .
 make
+
+mkdir /usr/include/phpcpp
+cp phpcpp.h /usr/include
+cp include/*.h /usr/include/phpcpp
 ```
 
 ## For main project
@@ -51,10 +55,4 @@ find /app/Python-3.9.17/ -type f -name "*.h" -exec cp --parents {} /app/extensio
 find /app/PHP-CPP/ -type f -name "*.cpp" -exec cp --parents {} /app/extension-cpp/php-cpp-src \;
 cmake .
 make
-
-mkdir /usr/include/phpcpp
-cp phpcpp.h /usr/include
-cp include/*.h /usr/include/phpcpp
-
-make -j4
 ```
