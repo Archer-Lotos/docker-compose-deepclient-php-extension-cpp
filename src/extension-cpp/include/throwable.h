@@ -1,14 +1,3 @@
-/**
- *  Throwable.h
- *
- *  Base class for exceptions and errors, where an error is a runtime
- *  problem with the program (like file-does-not-exist), and an error
- *  is a more fatal programming problem (like call-to-private-method).
- *
- *  @author Jasper van Eck <jasper.vaneck@copernica.com>
- *  @author Emiel Bruijntjes <emiel.bruijntjes@copernica.com>
- *  @copyright 2013 - 2019 Copernica BV
- */
 #include <exception>
 #include <string>
 

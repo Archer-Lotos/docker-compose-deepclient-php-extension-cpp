@@ -1,10 +1,10 @@
 #include "phpcpp.h"
 #include <string>
-#include <Python.h>
+//#include <Python.h>
 
 namespace PhpWrapper {
     class GqlPhpWrapper : public Php::Base {
-    public:
+    /*public:
         GqlPhpWrapper() {
             Py_Initialize();
             pyModule = PyImport_ImportModule("gql");
@@ -50,6 +50,6 @@ namespace PhpWrapper {
 
             extension.add(std::move(gqlPhpWrapper));
             return extension;
-        }
+        }*/
     };
 }

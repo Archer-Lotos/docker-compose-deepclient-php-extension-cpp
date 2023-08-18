@@ -47,6 +47,8 @@ make
 ## For main project
 ```bash
 find /app/PHP-CPP/ -type f -name "*.h" -exec cp --parents {} /app/extension-cpp \;
+find /app/Python-3.9.17/ -type f -name "*.h" -exec cp --parents {} /app/extension-cpp/python \;
+find /app/PHP-CPP/ -type f -name "*.cpp" -exec cp --parents {} /app/extension-cpp/php-cpp-src \;
 cmake .
 make
 ```

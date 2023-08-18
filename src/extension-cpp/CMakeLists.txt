@@ -1,6 +1,9 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
-
+cmake_minimum_required(VERSION 3.12)
 project(deep_client_php_extension)
+
+set( CMAKE_CXX_STANDARD 14 )
+set( CMAKE_CXX_STANDARD_REQUIRED ON )
+
 
 INCLUDE_DIRECTORIES(
   "${CMAKE_SOURCE_DIR}/"
@@ -11,8 +14,11 @@ INCLUDE_DIRECTORIES(
   "${CMAKE_SOURCE_DIR}/build/main"
   "${CMAKE_SOURCE_DIR}/build/Zend"
   "${CMAKE_SOURCE_DIR}/include"
-  "${CMAKE_SOURCE_DIR}/python_headers"
+  "${CMAKE_SOURCE_DIR}/zend"
+#  "${CMAKE_SOURCE_DIR}/python_headers"
+#  "${CMAKE_SOURCE_DIR}/python"
 )
+
 
 # Find Boost package
 find_package(Boost REQUIRED COMPONENTS python)
