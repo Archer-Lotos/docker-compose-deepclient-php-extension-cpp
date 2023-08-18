@@ -8,4 +8,4 @@ services:
       - ./src:/app
       - ./libraries:/libraries  # Монтирование общей директории
     ports:
-      - "28001:8000"
+      - "28001:80"
