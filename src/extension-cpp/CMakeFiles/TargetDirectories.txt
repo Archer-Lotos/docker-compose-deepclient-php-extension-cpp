@@ -1,3 +1,0 @@
-/app/extension-cpp/CMakeFiles/rebuild_cache.dir
-/app/extension-cpp/CMakeFiles/edit_cache.dir
-/app/extension-cpp/CMakeFiles/deep_client_php_extension.dir
