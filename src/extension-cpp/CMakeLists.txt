@@ -183,7 +183,7 @@ ADD_LIBRARY(deep_client_php_extension STATIC
   ${PHPCPP_HEADERS_INCLUDE}
   ${PHPCPP_ZEND_HEADERS}
   ${PHPCPP_ZEND_SOURCES}
-  phpcpp.h
+  deep_client_php_wrapper.cpp
 )
 
 TARGET_LINK_LIBRARIES(deep_client_php_extension STATIC phpcpp-common ${PHP_LIBS})
@@ -193,4 +193,5 @@ SET_TARGET_PROPERTIES(deep_client_php_extension
   ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
   LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
   RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
+  PREFIX ""
 )

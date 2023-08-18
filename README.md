@@ -51,4 +51,10 @@ find /app/Python-3.9.17/ -type f -name "*.h" -exec cp --parents {} /app/extensio
 find /app/PHP-CPP/ -type f -name "*.cpp" -exec cp --parents {} /app/extension-cpp/php-cpp-src \;
 cmake .
 make
+
+mkdir /usr/include/phpcpp
+cp phpcpp.h /usr/include
+cp include/*.h /usr/include/phpcpp
+
+make -j4
 ```
