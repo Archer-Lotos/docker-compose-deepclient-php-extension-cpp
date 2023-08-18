@@ -43,3 +43,10 @@ find /app/php-src/Zend/ -type f -name "*.h" -exec cp --parents {} /app/PHP-CPP/z
 cmake .
 make
 ```
+
+## For main project
+```bash
+find /app/PHP-CPP/ -type f -name "*.h" -exec cp --parents {} /app/extension-cpp \;
+cmake .
+make
+```
